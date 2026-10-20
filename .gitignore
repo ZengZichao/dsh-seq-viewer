@@ -1,0 +1,7 @@
+viewer-app/node_modules/
+viewer-app/dist/
+node_modules/
+*.log
+*.tgz
+.DS_Store
+._*

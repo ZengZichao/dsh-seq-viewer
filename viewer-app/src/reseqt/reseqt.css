@@ -1,0 +1,87 @@
+:root {
+    /** Base colors */
+    --clr-dark-a0: #0f172a;
+    --clr-light-a0: #ffffff;
+
+    /** Theme primary colors (Blue) */
+    --clr-primary-a0: #0071f2;
+    --clr-primary-a10: #3472e5;
+    --clr-primary-a20: #4974d8;
+    --clr-primary-a30: #5775cc;
+    --clr-primary-a40: #6277bf;
+    --clr-primary-a50: #6a79b2;
+
+    /** Theme surface colors (Light mode backgrounds) */
+    --clr-surface-a0: #ffffff;
+    --clr-surface-a10: #f8fafc;
+    --clr-surface-a20: #f1f5f9;
+    --clr-surface-a30: #e2e8f0;
+    --clr-surface-a40: #cbd5e1;
+    --clr-surface-a50: #94a3b8;
+
+    /** Theme tonal surface colors */
+    --clr-surface-tonal-a0: #eef0fe;
+    --clr-surface-tonal-a10: #e1e3ef;
+    --clr-surface-tonal-a20: #d5d6e1;
+    --clr-surface-tonal-a30: #c8c9d2;
+    --clr-surface-tonal-a40: #bcbdc4;
+    --clr-surface-tonal-a50: #afb0b6;
+
+    /** Font */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /** Additional Text & Border Semantics */
+    --clr-text-secondary: #475569;
+    --clr-text-muted: #64748b;
+    --clr-border: #e2e8f0;
+    --clr-border-subtle: #f1f5f9;
+    --clr-input-bg: #ffffff;
+
+    /** Specific functional colors */
+    --clr-success: #10b981;
+    --clr-error: #ef4444;
+    --clr-success-bg: #ecfdf5;
+    --clr-error-bg: #fef2f2;
+    --clr-warning: #f59e0b;
+    --clr-warning-bg: #fffbeb;
+}
+
+[data-theme='dark'] {
+    /** Base colors flipped for dark mode */
+    --clr-dark-a0: #f8fafc;
+    --clr-light-a0: #020617;
+
+    /** Primary colors (slightly desaturated/brightened for dark mode readability) */
+    --clr-primary-a0: #3b82f6;
+    --clr-primary-a10: #60a5fa;
+    --clr-primary-a20: #93c5fd;
+
+    /** Theme surface colors (Dark mode slate/zinc scale) */
+    --clr-surface-a0: #0f172a;
+    --clr-surface-a10: #1e293b;
+    --clr-surface-a20: #334155;
+    --clr-surface-a30: #475569;
+    --clr-surface-a40: #64748b;
+    --clr-surface-a50: #94a3b8;
+
+    /** Theme tonal surface colors (Dark blue-ish tints) */
+    --clr-surface-tonal-a0: #020617;
+    --clr-surface-tonal-a10: #0f172a;
+    --clr-surface-tonal-a20: #1e293b;
+
+    /** Additional Text & Border Semantics */
+    --clr-text-secondary: #94a3b8;
+    --clr-text-muted: #64748b;
+    --clr-border: #334155;
+    --clr-border-subtle: #1e293b;
+    --clr-input-bg: #1e293b;
+
+    /** Functional colors for dark mode */
+    --clr-success: #34d399;
+    --clr-error: #f87171;
+    --clr-success-bg: rgba(16, 185, 129, 0.1);
+    --clr-error-bg: rgba(239, 68, 68, 0.1);
+    --clr-warning: #fbbf24;
+    --clr-warning-bg: rgba(245, 158, 11, 0.1);
+}
+

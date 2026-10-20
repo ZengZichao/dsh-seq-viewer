@@ -1,0 +1,72 @@
+{
+  "name": "dsh-seq-viewer",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness (DSH) plugin: open sequence alignment files from the workspace file tree in a right-sidebar ReSeqt viewer tab.",
+  "type": "module",
+  "license": "MIT",
+  "author": "dsh-seq-viewer contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZengZichao/dsh-seq-viewer.git"
+  },
+  "homepage": "https://github.com/ZengZichao/dsh-seq-viewer#readme",
+  "bugs": {
+    "url": "https://github.com/ZengZichao/dsh-seq-viewer/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "alignment",
+    "msa",
+    "fasta",
+    "clustal",
+    "phylip",
+    "sequence-viewer"
+  ],
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "lib/",
+    "scripts/",
+    "viewer-app/src/",
+    "viewer-app/index.html",
+    "viewer-app/package.json",
+    "viewer-app/vite.config.ts",
+    "viewer-app/tsconfig.json",
+    "examples/",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "NOTICE",
+    "LICENSE",
+    "LICENSE.reseqt",
+    "LICENSE.react"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "engines": {
+      "dsh": ">=0.2.1-rc.2 <0.3.0"
+    }
+  },
+  "scripts": {
+    "check": "node --check src/index.js && node --check lib/client.js",
+    "test": "node --test test/*.test.js",
+    "build:viewer": "node scripts/build-viewer.mjs"
+  }
+}

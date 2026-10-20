@@ -1,0 +1,31 @@
+# NOTICE
+
+This repository includes an adapted copy of **ReSeqt 1.0.1**.
+
+- Upstream project: ReSeqt
+- Author: vaaloo (Valentin Gorgodian)
+- Project website: https://reseqt.vaaloo.fr
+- Source repository: https://github.com/vaaloo/reseqt
+- License: MIT (see LICENSE.reseqt)
+
+The viewer source is vendored in `viewer-app/src/reseqt/` with the adaptations
+listed below. The plugin glue code (DSH integration, alignment
+format normalization, format settings UI, build scripts, and documentation) is
+MIT-licensed; see LICENSE.
+
+Adaptations made for the DSH plugin:
+
+- `ReSeqtProps` gained an optional `height` override so the viewer can fill a
+  sidebar iframe; the default 14 px cell size is used instead of 22 px.
+- Narrow-sidebar media rules tighten the toolbar and hide duplicate metrics.
+- The viewer renders as a single-file Vite build inside a Blob iframe and
+  receives FASTA text over the `dsh-seq-viewer:ready` / `:load` / `:loaded`
+  postMessage protocol.
+- The host detects the DSH theme and forwards it; the embedded viewer also
+  handles explicit theme updates.
+- CLUSTAL / PHYLIP / Stockholm parsing, gzip handling, and nucleotide /
+  protein detection live in the plugin glue, not in the upstream component.
+
+The embedded single-file viewer also includes **React 19** and **React DOM 19**,
+Copyright (c) Meta Platforms, Inc. and affiliates, licensed under the MIT
+License. See LICENSE.react.

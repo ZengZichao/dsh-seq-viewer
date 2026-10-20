@@ -1,0 +1,7 @@
+# Bundle patch for dsh-seq-viewer.
+#
+# The `insert` row mounts the host half (src/index.js). The browser half is
+# served separately through `dsh.client` in package.json.
+- insert:
+    - id: dsh-seq-viewer
+      name: dsh-seq-viewer
